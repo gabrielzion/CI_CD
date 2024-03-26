@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
     width: 50%;
-    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo */
 }
 
 h1 {
-    text-align: center;
     color: #333;
 }
 
@@ -23,17 +27,16 @@ label {
     color: #555;
 }
 
-input[type="number"], select {
-    width: 80%;
+input[type="number"], select, button {
+    width: calc(100% - 22px); /* Define o tamanho para ser igual */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
 }
 
 button {
-    width: 100%;
-    padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -48,4 +51,6 @@ button:hover {
 #resultado {
     margin-top: 20px;
     font-size: 18px;
+    text-align: center;
+    font-weight: bold;
 }
